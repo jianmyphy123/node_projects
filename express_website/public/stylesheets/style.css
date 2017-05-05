@@ -1,0 +1,19 @@
+body {
+  padding-top: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.jumbotron {
+	background: url('../images/bg.jpeg');
+}
+
+footer {
+	background: #f4f4f4;
+	margin-top: 30px;
+	padding-top: 10px;
+	text-align: center;
+	overflow: auto;
+}
