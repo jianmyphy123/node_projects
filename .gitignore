@@ -5,4 +5,6 @@
 .sass-cache
 
 # package control
+express_website/node_modules
 nodeauth/node_modules
+nodeblog/node_modules
