@@ -1,0 +1,8 @@
+# general
+.idea
+.DS_Store
+*~
+.sass-cache
+
+# package control
+nodeauth/node_modules
