@@ -8,3 +8,4 @@
 express_website/node_modules
 nodeauth/node_modules
 nodeblog/node_modules
+nodeblog/public/images/uploads
