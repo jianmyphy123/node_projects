@@ -1,0 +1,19 @@
+extends ../layouts/master
+
+block content
+  .container
+    .row
+      .col-md-4
+        img.detail(src='/images/#{book.cover}')
+      .col-md-8
+        h2 #{book.title}
+        ul.bookInfo
+          li Category: #{book.category}
+          li Author: #{book.author}
+          li Publisher: #{book.publisher}
+        br
+        .price
+          span $#{book.price}
+        p #{book.description}
+        form(method='post', action='/cart/#{book._id}')
+          input.btn.btn-success(type='submit', value='Add To Cart')

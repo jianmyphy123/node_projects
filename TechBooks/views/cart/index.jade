@@ -1,0 +1,35 @@
+extends ../layouts/master
+
+block content
+  .container
+    .row
+      .col-md-12
+        h2 Your Shopping Cart&nbsp;
+          span
+            a(href='/cart/remove') Empty cart
+
+        if cart.items
+          table.table
+            thead
+              tr
+                th(width="650") Item
+                th(width='100') Quantity
+                th(width='100') Total
+                th(width='100')
+              tbody
+                each item in cart.items
+                  tr
+                    td
+                      a(href='books/details/#{item.item}') #{item.title}
+                    td
+                      span #{item.qty}
+                    td
+                      span #{item.price * item.qty}
+                    td
+          .row
+            .col-md-6
+              h4 Total:&nbsp;
+                strong #{cart.total}
+            .col-md-6
+        else
+          p There is no items in your cart

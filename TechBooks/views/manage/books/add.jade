@@ -1,0 +1,47 @@
+extends ../../layouts/manage
+
+block content
+  .col-md-12
+    h2 Add Book
+    .container
+      form.form-horizontal(method='post', action='/manage/books')
+        .row.form-group
+          .col-md-2.control-label
+            label Title
+          .col-md-10
+            input.form-control(name='title', type='text', value='')
+        .row.form-group
+          .col-md-2.control-label
+            label Author
+          .col-md-10
+            input.form-control(name='author', type='text', value='')
+        .row.form-group
+          .col-md-2.control-label
+            label Publisher
+          .col-md-10
+            input.form-control(name='publisher', type='text', value='')
+        .row.form-group
+          .col-md-2.control-label
+            label Price
+          .col-md-10
+            input.form-control(name='price', type='text', value='')
+        .row.form-group
+          .col-md-2.control-label
+            label Category
+          .col-md-10
+            select.form-control(name='category')
+              each category, i in categories
+                option(value='#{category.name}') #{category.name}
+        .row.form-group
+          .col-md-2.control-label
+            label Description
+          .col-md-10
+              textarea.form-control(name=description, value='')
+        .row.form-group
+          .col-md-2.control-label
+            label Cover Url
+          .col-md-10
+            input.form-control(name='cover', type='text', value='')
+        .row
+          .col-md-10.col-md-offset-2
+            input.btn.btn-primary(type='submit', value='Submit')

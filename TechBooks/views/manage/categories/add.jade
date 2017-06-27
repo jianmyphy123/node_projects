@@ -1,0 +1,15 @@
+extends ../../layouts/manage
+
+block content
+  .col-md-12
+    h2 Add Category
+    .container
+      form.form-horizontal(method='post', action='/manage/categories')
+        .row.form-group
+          .col-md-2.control-label
+            label Name
+          .col-md-10
+            input.form-control(name='name', type='name', value='')
+        .row
+          .col-md-10.col-md-offset-2
+            input.btn.btn-primary(type='submit', value='Submit')

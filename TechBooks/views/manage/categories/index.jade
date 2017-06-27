@@ -1,0 +1,24 @@
+extends ../../layouts/manage
+
+block content
+  .container
+    h2 Categories
+    p
+      a(href='/manage/categories/add') Add Category
+    table.table
+      thead
+        tr
+          th(width='200') ID
+          th(width='200') Category name
+          th(width='180')
+          th(width='180')
+      tbody
+        if categories
+          each category, i in categories
+            tr
+              td #{category._id}
+              td #{category.name}
+              td
+                a.btn.btn-primary.btn-sm(href='/manage/categories/edit/#{category._id}') Edit
+              td
+                a.btn.btn-danger.btn-sm.removeCategory(href='#', data-id='#{category._id}') Delete

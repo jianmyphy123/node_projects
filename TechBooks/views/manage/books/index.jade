@@ -1,0 +1,26 @@
+extends ../../layouts/manage
+
+block content
+  .container
+    h2 Books
+    p
+      a(href='/manage/books/add') Add Book
+    table.table
+      thead
+        tr
+          th(width='200') ID
+          th(width='200') Book Title
+          th(width='200') Category
+          th(width='180')
+          th(width='180')
+      tbody
+        if books
+          each book, i in books
+            tr
+              td #{book._id}
+              td #{book.title}
+              td #{book.category}
+              td
+                a.btn.btn-primary.btn-sm(href='/manage/books/edit/#{book._id}') Edit
+              td
+                a.btn.btn-danger.btn-sm.removeBook(href='#', data-id='#{book._id}') Delete

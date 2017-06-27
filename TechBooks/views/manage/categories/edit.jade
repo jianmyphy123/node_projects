@@ -1,0 +1,15 @@
+extends ../../layouts/manage
+
+block content
+  .col-md-12
+    h2 Edit Book
+    .container
+      form.form-horizontal(method='post', action='/manage/categories/edit/#{category._id}')
+        .row.form-group
+          .col-md-2.control-label
+            label Name
+          .col-md-10
+            input.form-control(name='name', type='text', value='#{category.name}')
+        .row
+          .col-md-10.col-md-offset-2
+            input.btn.btn-primary(type='submit', value='Submit')
