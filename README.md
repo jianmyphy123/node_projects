@@ -20,3 +20,9 @@
 * Uploading Files with Multer
 * Date Formatting with Moment
 * Using Ckeditor
+## TechBooks (Shopping Cart)
+* Frontend Routes & Templates
+* Database & Model
+* Display Data from MongoDB
+* Admin CRUD
+* Shopping Cart
