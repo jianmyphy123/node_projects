@@ -26,3 +26,7 @@
 * Display Data from MongoDB
 * Admin CRUD
 * Shopping Cart
+## chatio (SocketIO)
+* ChatIO User Interface
+* Sending Chat Messages
+* Adding User Names
