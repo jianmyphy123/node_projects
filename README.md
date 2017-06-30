@@ -30,3 +30,8 @@
 * ChatIO User Interface
 * Sending Chat Messages
 * Adding User Names
+## findadoc (Apache Cassandra)
+* Using Apache Cassandra
+* Setting Keyspaces and Columns
+* CQL (Cassandra Query Language)
+* Search Functionality
