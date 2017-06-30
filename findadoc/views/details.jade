@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  a(href='/doctors') &lt; Go Back
+  br
+  h2 #{doctor.full_name}
+  br
+  h4 Physician Information
+  ul.doc-info
+    li Full Name: #{doctor.full_name}
+    li Accepting New Patients: #{doctor.new_patients}
+    li Specialty/Category: #{doctor.full_name}
+    li Graduation Date: #{doctor.grad_year}
+  h4 Practice Information
+  ul.practice-info
+    li Name: #{doctor.practice_name}
+    li Address: #{doctor.street_address} #{doctor.city} #{doctor.state} #{doctor.zip}
+  br
+  br
+  a.editDoctor(href='/edit/#{doctor.doc_id}') Edit
+  | |
+  a.deleteDoctor(href='#', data-id='#{doctor.doc_id}') Delete

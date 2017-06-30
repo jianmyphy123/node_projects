@@ -1,0 +1,93 @@
+extends layout
+
+block content
+
+  h3 Doctor Info
+  form.addForm(method='post', action='/doctors/add')
+    div
+      label Full Name:
+      input(type='text', name='full_name')
+    div
+      label Category:
+      select(name='category')
+        each category, i in categories
+          option(value='#{category.name}') #{category.name}
+    div
+      label Accepting New Patients:
+      select(name='new_patients')
+        option(value='true') Yes
+        option(value='false') No
+    div
+      label Graduation Year:
+      input(type='text', name='grad_year')
+    h3 Practice Info
+    div
+      label Practice Name:
+      input(type='text', name='practice_name')
+    div
+      label Street Address
+      input(type='text', name='street_address')
+
+    div
+      label City:
+      input(type='text', name='city')
+    div
+      label State:
+      select(name='state')
+        option(value='0') Select a State
+        option(value='AL') Alabama
+        option(value='AK') Alaska
+        option(value='AZ') Arizona
+        option(value='AR') Arkansas
+        option(value='CA') California
+        option(value='CO') Colorado
+        option(value='CT') Connecticut
+        option(value='DE') Delaware
+        option(value='DC') District Of Columbia
+        option(value='FL') Florida
+        option(value='GA') Georgia
+        option(value='HI') Hawaii
+        option(value='ID') Idaho
+        option(value='IL') Illinois
+        option(value='IN') Indiana
+        option(value='IA') Iowa
+        option(value='KS') Kansas
+        option(value='KY') Kentucky
+        option(value='LA') Louisiana
+        option(value='ME') Maine
+        option(value='MD') Maryland
+        option(value='MA') Massachusetts
+        option(value='MI') Michigan
+        option(value='MN') Minnesota
+        option(value='MS') Mississippi
+        option(value='MO') Missouri
+        option(value='MT') Montana
+        option(value='NE') Nebraska
+        option(value='NV') Nevada
+        option(value='NH') New Hampshire
+        option(value='NJ') New Jersey
+        option(value='NM') New Mexico
+        option(value='NY') New York
+        option(value='NC') North Carolina
+        option(value='ND') North Dakota
+        option(value='OH') Ohio
+        option(value='OK') Oklahoma
+        option(value='OR') Oregon
+        option(value='PA') Pennsylvania
+        option(value='RI') Rhode Island
+        option(value='SC') South Carolina
+        option(value='SD') South Dakota
+        option(value='TN') Tennessee
+        option(value='TX') Texas
+        option(value='UT') Utah
+        option(value='VT') Vermont
+        option(value='VA') Virginia
+        option(value='WA') Washington
+        option(value='WV') West Virginia
+        option(value='WI') Wisconsin
+        option(value='WY') Wyoming
+    div
+      label Zipcode:
+      input(type='text', name='zip')
+    div
+      input(type='submit', value='Add Doctor')
